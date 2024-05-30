@@ -1,0 +1,15 @@
+<div>
+  <label>
+    Name:
+    <input [(ngModel)]="name" required>
+  </label>
+  <label>
+    Image URL:
+    <input [(ngModel)]="imageUrl" required>
+  </label>
+  <label>
+    Description:
+    <textarea [(ngModel)]="description"></textarea>
+  </label>
+  <button (click)="onAddPokemon()">Add Pokemon</button>
+</div>
