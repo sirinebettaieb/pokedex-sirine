@@ -5,15 +5,10 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-pokemon-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [],
   templateUrl: './pokemon-detail.component.html',
   styleUrl: './pokemon-detail.component.scss'
 })
 export class PokemonDetailComponent {
-  @Input() pokemon: Pokemon = {
-    
-    name: '',
-    imageUrl: '',
-    description: '',
-  };
+  @Input() pokemon!: Pokemon ;
 }

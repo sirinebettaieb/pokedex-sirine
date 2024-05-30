@@ -1,4 +1,7 @@
-<div *ngFor="let pokemon of pokemons" (click)="onPokemonClick(pokemon)">
-  <h2>{{ pokemon.name }}</h2>
-  <img [src]="pokemon.imageUrl" alt="{{ pokemon.name }}">
-</div>
+
+<section class="flex-row justify-content-around">
+  <div *ngFor="let pokemon of pokemons" class="flex-column justify-content-start shadowHovered" (click)="selectPokemon(pokemon)">
+      <h2>{{pokemon.name}}</h2>
+      <img [src]="pokemon.imageUrl" [alt]="pokemon.name">
+  </div>
+</section>

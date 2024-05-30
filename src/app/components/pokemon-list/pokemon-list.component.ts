@@ -14,8 +14,9 @@ export class PokemonListComponent {
   @Input() pokemons: Pokemon[] = [];
   @Output() pokemonSelected = new EventEmitter<Pokemon>();
 
-  onPokemonClick(pokemon: Pokemon) {
-    this.pokemonSelected.emit(pokemon);
+  
+  selectPokemon(pokemon: Pokemon) {
+    this.pokemonSelected.emit(pokemon)
   }
 
 }

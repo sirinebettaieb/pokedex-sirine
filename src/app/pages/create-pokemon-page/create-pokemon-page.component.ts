@@ -28,5 +28,8 @@ export class CreatePokemonPageComponent {
 
     }
   }
+  backToHome(){
+    this.router.navigate(['/']);
+  }
 
 }

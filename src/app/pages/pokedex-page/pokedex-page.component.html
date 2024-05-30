@@ -1,4 +1,11 @@
 <div>
     <app-pokemon-list [pokemons]="pokemons" (pokemonSelected)="onPokemonSelected($event)"></app-pokemon-list>
-    <app-pokemon-detail [pokemon]="selectedPokemon"></app-pokemon-detail>
+    <section class="flex-row justify-content-center">
+        <ng-container *ngIf="selectedPokemon">
+            <app-pokemon-detail
+            [pokemon]="selectedPokemon"
+            ></app-pokemon-detail>
+        </ng-container>
+    </section>
+    
 </div>

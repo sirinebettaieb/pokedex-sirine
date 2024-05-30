@@ -13,7 +13,7 @@ export class PokemonService {
     'A strange seed was planted on its back at birth.'),
     new Pokemon(
       'Charmander',
-      'https://img.pokemondb.net/artwork/large/charmander.jpg', 
+      'https://th.bing.com/th/id/OIP.ifDDAsfZM-Kar1elZIvdcQHaHa?w=216&h=216&c=7&r=0&o=5&dpr=1.5&pid=1.7', 
       'Obviously prefers hot places. When it rains, steam is said to spout from the tip of its tail.'),
     new Pokemon(
       'Pikachu', 
@@ -21,6 +21,7 @@ export class PokemonService {
       'An electric-type Pokémon.'),
  
   ]
+  pokemon$: any;
  
    
     getPokemons(): Pokemon[] {
@@ -30,8 +31,9 @@ export class PokemonService {
     getPokemonByName(name: string): Pokemon | undefined {
       return this.pokemons.find(pokemon => pokemon.name === name);
     }
-    addPokemon(pokemon: Pokemon) {
-      this.pokemons.push(pokemon);
+    addPokemon(pokemon: Pokemon): void {
+      const currentList = this.pokemon$.getValue()
+      this.pokemon$.next([...currentList, pokemon])
     }
 
   constructor() { }

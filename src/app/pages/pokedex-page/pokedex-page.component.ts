@@ -3,10 +3,11 @@ import { PokemonService } from '../../shared/pokemon.service';
 import { Pokemon } from '../../shared/pokemon.model';
 import { PokemonListComponent } from '../../components/pokemon-list/pokemon-list.component';
 import { PokemonDetailComponent } from '../../components/pokemon-detail/pokemon-detail.component';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-pokedex-page',
   standalone: true,
-  imports: [PokemonListComponent,PokemonDetailComponent],
+  imports: [PokemonListComponent,PokemonDetailComponent,CommonModule],
   templateUrl: './pokedex-page.component.html',
   styleUrl: './pokedex-page.component.scss'
 })
